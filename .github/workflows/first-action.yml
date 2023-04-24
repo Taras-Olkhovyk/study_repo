@@ -1,0 +1,16 @@
+name: Execute Bash Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Bash Script
+      run: |
+        docker run ubuntu:latest /bin/bash -c "echo Taras Olkhovyk"
